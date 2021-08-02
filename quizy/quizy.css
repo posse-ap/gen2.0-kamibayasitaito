@@ -1,21 +1,48 @@
 .simple-border{
-    text-decoration:underline solid gold
+    text-decoration:underline solid gold;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.image1{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-.background{
+.box-before-click{
     width: 800px;
     height:50px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1%;
     background:whitesmoke;
     border:1px solid #f5f5f5;
     cursor: pointer;
     text-underline-position: auto;
+    }
+
+
+    .box-after-click{
+        width: 800px;
+    height:50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    background-color: lightblue;
+    border:1px solid #f5f5f5;
+    cursor: pointer;
+    text-underline-position: auto;
+}
+
+    .answer{
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        font-weight: bold;
+        border: solid 3px #000000;
+    }
+
     
-    }
-    .image1{
-        margin-left: auto;
-        margin-right: auto;
-    }
     
