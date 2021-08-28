@@ -39,3 +39,5 @@ trueChoice.classList.add('box-after-click')
 
 });
 
+
+
