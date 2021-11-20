@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <!-- 【】内は適宜書き換えて下さい -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="【@basketball_1012】" />
+<meta name="twitter:title" content="【シェアするページのタイトル】" />
+<meta name="twitter:description" content="【シェアするページの概要】" />
+<meta name="twitter:image" content="【シェアするページのアイコン画像(絶対パス)】" />
+<meta name="twitter:url" content="【シェアするページのURL】" />
+    <title>app</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="app_pc.css">
+    <link rel="stylesheet" href="app_smartphone.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="all_wraper">
+    <div id="mainPage">
+
+        <header class="header">
+
+
+            <img src="https://posse.anti-pattern.co.jp/img/posseLogo.png" alt="" class="header_logo_img">
+            <p class="header_week">4th week</p>
+            <button class="header_button" id="headerButton">記録・投稿</button>
+
+        </header>
+
+        <div class="container">
+            <div class="main_left">
+                <div class="main_time">
+                    <ul class="time_box_container">
+                        <li class="time_box">
+
+
+                            <span class="time_title">Today
+
+                            </span><br>
+                            <span class="time_result">3
+
+
+                            </span>
+                            <br>
+                            <span class="time_unit">hour
+
+                            </span>
+
+                        </li>
+                        <li class="time_box">
+
+
+                            <span class="time_title">Month
+
+                            </span><br>
+                            <span class="time_result">120
+
+
+                            </span>
+                            <br>
+                            <span class="time_unit">hour
+
+                            </span>
+
+                        </li>
+                        <li class="time_box">
+
+
+                            <span class="time_title">Total
+
+                            </span><br>
+                            <span class="time_result">1340
+
+
+                            </span>
+                            <br>
+                            <span class="time_unit">hour
+
+                            </span>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="time_graph_container">
+                    <canvas class="time_graph" id="myBarChart"></canvas>
+
+                </div>
+            </div>
+
+            <div class="main_right">
+                <div class="main_contents">
+                    <ul class="study_result_container">
+                        <li class="study_result">
+                            <h1 class="study_result_title">学習言語</h1>
+                            <div class="study_chart">
+                                <canvas id="studyLanguageChart"></canvas>
+
+                            </div>
+                            <ul class="study_language_language_container">
+                                <div class="study_language_display">
+                                
+                                    <li>
+                                        <div class="study_language_javascript">
+                                           
+                                        </div>
+                                        <p>JavaScript</p>
+                                    </li>
+                                    <li>
+                                        <div class="study_language_css">
+                                         
+                                        </div>
+                                        <p>CSS</p>
+                                    </li>
+                                    <li>
+                                        <div class="study_language_php">
+                                         
+                                        </div>
+                                        <p>PHP</p>
+                                    </li>
+                                
+                                </div>
+                                <div class="study_language_display">
+                                    <li>
+                                        <div class="study_language_html">
+                                      
+                                        </div>
+                                        <p>HTML</p>
+                                    </li>
+                                    <li>
+                                        <div class="study_language_laravel">
+                                   
+                                        </div>
+                                        <p>Laravel</p>
+                                    </li>
+                                    <li>
+                                        <div class="study_language_sql">
+                                          
+                                        </div>
+                                        <p>SQL</p>
+                                    </li>
+                                </div>
+                                <li>
+                                    <div class="study_language_shell">
+                                       
+                                    </div>
+                                    <p>SHELL</p>
+                                </li>
+                                <li>
+                                    <div class="study_language_other">
+                                       
+                                    </div>　
+                                    <p>情報システム基礎知識（その他）</p>
+                                </li>
+
+
+                            </ul>
+
+
+                            
+
+
+                        </li>
+                        <li class="study_result">
+                            <h1 class="study_result_title">学習コンテンツ</h1>
+                            <div class="study_chart">
+                                <canvas id="studyContentsChart"></canvas>
+                            </div>
+
+                            <ul class="study_contents_contents_container">
+                                <li>
+                                    <div class="study_contents_dot">
+                                      
+                                    </div>
+                                    <p>ドットインストール</p>
+                                </li>
+                                <li>
+                                    <div class="study_contents_N">
+                                   
+                                    </div>
+                                    <p>N予備校</p>
+                                </li>
+                                <li>
+                                    <div class="study_contents_posse">
+                                    
+                                    </div>
+                                    <p>POSSE課題</p>
+                                </li>
+                            
+                            
+                            
+                            </ul>
+
+                            
+
+
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <div class="month_change_container">
+            <div class="month_change">
+                <div>
+                    < </div>
+
+                        <div>
+                            <time>2020年10月</time>
+
+
+
+
+                        </div>
+                        >
+
+                        <div>
+
+
+                        </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="mordal" id="mordal">
+        <div class="mordal_container" id="mordalContainer">
+            <div class="mordal_left">
+                <div class="study_day_container">
+                    <p class="mordal_sub_title">学習日</p>
+                    <div class="study_day_write_space">
+                        <input type="date" maxlength="30" size=50 style="font-size:px;" class="study_currendor">
+
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="study_contents_container">
+                    <p class="mordal_sub_title">学習コンテンツ</p>
+                    <ul class="choices_container">
+                        <div class="display_flex">
+                            <li role="checkbox" class="choices check_box">
+                                N予備校
+                            </li>
+                            <li role="checkbox" class="choices check_box">
+                                ドットインストール
+                            </li>
+                        </div>
+                        <li role="checkbox" class="choices check_box">
+                            POSSE課題
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="study_language_container">
+                    <p class="mordal_sub_title">学習言語（複数選択可）</p>
+                    <ul class="choices_container">
+                        <div class="display_flex">
+
+                            <li role="checkbox" class="choices check_box">HTML</li>
+                            <li role="checkbox" class="choices check_box">CSS</li>
+                            <li role="checkbox" class="choices check_box">JavaScript</li>
+
+                        </div>
+                        <div class="display_flex">
+
+                            <li role="checkbox" class="choices check_box">PHP</li>
+                            <li role="checkbox" class="choices check_box">Laravel</li>
+                            <li role="checkbox" class="choices check_box">SQL</li>
+                            <li role="checkbox" class="choices check_box">SHELL</li>
+
+                        </div>
+
+                        <div role="checkbox" class="choices check_box">情報システム基礎知識（その他）</div>
+
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="mordal_right">
+
+                <div class="study_time">
+                    <p class="mordal_sub_title">学習時間</p>
+                    <textarea class="study_time_write_space" 　name="msg" cols="30" rows="1"
+                        style="font-size:20px"></textarea>
+
+
+
+
+
+                </div>
+
+                <div class="twitter_comment_container">
+                    <p class="mordal_sub_title">Twitter用コメント</p>
+                    <textarea id="twitterText" cols="37" rows="7" type="text"
+                        class="twitter_comment_write_space"></textarea>
+
+
+                </div>
+
+                <div class="twitter_shere_button">
+
+
+                </div>
+
+                <div>
+                    <p id="checkTwitter" class="share_twitter_button">Twitterにシェアする</p>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+        <div class="back_button" id="backButton">
+            <p>×</p>
+        </div>
+
+
+        <div class="submit_container">
+            <a href="javascript:twitText()" class="submit_button" id="submitButton" onclick="submit_click()">記録・投稿</a>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="load_mordal" id="loadMordal">
+
+        <div class="loader">Loading...</div>
+
+    </div>
+
+    <div class="awesome_page" id="awesomePage">
+        <div class="awesome_container">
+            <h1 class="awesome_character">AWESOME</h1>
+            <i class="fas fa-check-circle fa-4x"></i>
+            <p>記録・投稿<br>完了しました</p>
+        </div>
+
+        <div class="back_button" id="mainBackButton">
+            <p>×</p>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
