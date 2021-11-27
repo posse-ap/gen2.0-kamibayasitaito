@@ -186,7 +186,7 @@
             height: 200px;
             overflow: hidden;
             margin:20px;
-            margin-top: -50px;
+            margin-top: -60px;
         }
         
         .study_language_display{
@@ -399,7 +399,6 @@
         
         .choices_container{
             list-style-type: none;
-            
         }
         
         /* 選択欄 */

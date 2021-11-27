@@ -20,8 +20,6 @@ mordalbutton.addEventListener('click',mordalchange);
 
 const smartphoneButton=document.getElementById('Button_smartphone')
 
-smartphoneButton.addEventListener('click',mordalchange)
-
 
 const backbutton =document.getElementById('backButton');
 const mordalback=e=>{

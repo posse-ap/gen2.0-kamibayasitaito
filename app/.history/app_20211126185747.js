@@ -18,9 +18,7 @@ mainpage.classList.add('main_page');
 
 mordalbutton.addEventListener('click',mordalchange);
 
-const smartphoneButton=document.getElementById('Button_smartphone')
-
-smartphoneButton.addEventListener('click',mordalchange)
+const 
 
 
 const backbutton =document.getElementById('backButton');

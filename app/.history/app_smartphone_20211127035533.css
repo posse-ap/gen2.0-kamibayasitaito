@@ -183,10 +183,9 @@
         .study_chart {
             position: relative;
             width:  calc(100% - 40px);
-            height: 200px;
+            height: 100px;
             overflow: hidden;
             margin:20px;
-            margin-top: -50px;
         }
         
         .study_language_display{
@@ -399,7 +398,6 @@
         
         .choices_container{
             list-style-type: none;
-            
         }
         
         /* 選択欄 */
@@ -410,7 +408,7 @@
             background-color: #f5f5f8;
             margin-top: 8px;
             border-radius: 30px;
-            font-size: 8px;
+            height: 3px;
             padding-top: 3px;
             cursor: pointer;
             
