@@ -5,13 +5,13 @@ USE ph2_app;
 DROP TABLE IF EXISTS `studyPost`;
 CREATE TABLE `studyPost`(
   `id` INT NOT NULL PRIMARY KEY,
-  `language_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `language_id` INT NOT NULL,
   `contents_id` INT NOT NULL,
   `study_time` INT NOT NULL,
   `date` DATE NOT NULL
 );
 
-INSERT INTO  (`id`,`language_id`,`contents_id`,`study_time`,`date`) VALUES
+INSERT INTO `studyPost`  (`id`,`language_id`,`contents_id`,`study_time`,`date`) VALUES
 (1 ,1, 1, 7,'2021-12-17'),
 (2 ,3, 2, 5,'2021-12-24'),
 (3 ,5, 3, 3,'2021-12-08'),
@@ -30,10 +30,10 @@ CREATE TABLE `language`(
 );
 
 INSERT INTO `language` (`language_id`,`language_name`) VALUES
-(1,'HTML'),
+(1,'JavaScript'),
 (2,'CSS'),
-(3,'JavaScript'),
-(4,'PHP'),
+(3,'PHP'),
+(4,'HTML'),
 (5,'Laravel'),
 (6,'SQL'),
 (7,'SHELL'),
