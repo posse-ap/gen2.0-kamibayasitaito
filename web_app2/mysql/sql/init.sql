@@ -11,7 +11,7 @@ CREATE TABLE `studyPost`(
   `date` DATE NOT NULL
 );
 
-INSERT INTO  (`id`,`language_id`,`contents_id`,`study_time`,`date`) VALUES
+INSERT INTO `studyPost`(`id`,`language_id`,`contents_id`,`study_time`,`date`) VALUES
 (1 ,1, 1, 7,'2021-12-17'),
 (2 ,3, 2, 5,'2021-12-24'),
 (3 ,5, 3, 3,'2021-12-08'),
