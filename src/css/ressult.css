@@ -1,3 +1,91 @@
+.body-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000000 0%, black 100%);
+  opacity: 1;
+  -webkit-animation: huerotator 3s infinite alternate;
+          animation: huerotator 3s infinite alternate;
+}
+
+@-webkit-keyframes huerotator {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes huerotator {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.title {
+  position: absolute;
+  bottom: 100px;
+  left: 25%;
+  width: 100vh;
+  transform: translate(0, -50%);
+}
+.title h2 {
+  position: relative;
+  margin: 30px;
+  text-align: center;
+}
+.title h2:before,
+.title h2:after {
+  position: absolute;
+  z-index: 0;
+  bottom: -10px;
+  display: block;
+  content: "";
+  border: 1em solid #d90606;
+}
+.title h2:before {
+  left: -30px;
+  border-left-width: 15px;
+  border-left-color: transparent;
+}
+.title h2:after {
+  right: -30px;
+  border-right-width: 15px;
+  border-right-color: transparent;
+}
+.title h2 span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 1rem 2rem;
+  color: red;
+  background: -webkit-linear-gradient(-45deg, red, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+}
+.title h2 span:before,
+.title h2 span:after {
+  position: absolute;
+  bottom: -10px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: "";
+  border-style: solid;
+  border-color: #b70505 transparent transparent transparent;
+}
+.title h2 span:before {
+  left: 0;
+  border-width: 10px 0 0 10px;
+}
+.title h2 span:after {
+  right: 0;
+  border-width: 10px 10px 0 0;
+}
+
 .team-list-container {
   position: absolute;
   display: flex;
@@ -6,6 +94,9 @@
   transform: translateX(-50%);
 }
 
+.left .score-container {
+  display: flex;
+}
 .left .item {
   background-color: black;
   margin-top: 20px;
@@ -16,18 +107,74 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.right .item {
-  background-color: black;
-  margin-top: 8px;
-}
-
-.item {
+  display: flex;
+  border-top: solid 3px gold;
+  border-bottom: solid 1px gold;
+  -o-border-image: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+     border-image: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+  border-image-slice: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.left .score {
+  margin-top: 18px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: -webkit-linear-gradient(-45deg, red, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+  border: solid 0px;
+  border-image-slice: 1;
+  border-top-right-radius: 10px;
+}
+.left .score-number {
+  color: red;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.right {
+  margin-left: 60px;
+}
+.right .score-container {
+  display: flex;
+}
+.right .item {
+  background-color: black;
+  margin-top: 8px;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  border-top: solid 3px gold;
+  border-bottom: solid 1px gold;
+  -o-border-image: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+     border-image: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+  border-image-slice: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.right .score {
+  margin-top: 6px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: -webkit-linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+  border: solid 0px;
+  border-image-slice: 1;
+  border-top-right-radius: 10px;
+}
+.right .score-number {
+  color: blue;
+  font-weight: bold;
+  font-size: 28px;
 }
 
 .list-item {

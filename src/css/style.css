@@ -1,5 +1,6 @@
 body {
   background-image: url(../../img/background2.jpeg);
+  overflow: hidden;
 }
 
 .team-wrapper {
@@ -260,15 +261,13 @@ body {
   }
 }
 .check-button {
-  margin-top: 100px;
+  margin-top: 80px;
   margin-left: 50%;
   transform: translate(-50%, -50%);
   background-color: black;
-  height: 56px;
-  width: 200px;
+  height: 35px;
+  width: 500px;
   padding-top: 20px;
-  border-top: solid gold 3px;
-  border-bottom: solid gold 3px;
   -o-border-image: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
      border-image: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
   border-image-slice: 1;
@@ -276,9 +275,12 @@ body {
 .check-button p {
   text-align: center;
   line-height: 0.95em;
+  font-size: 70px;
   font-weight: bold;
   color: transparent;
   background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em);
   -webkit-background-clip: text;
+  margin: -2.5rem calc(50% - 50vw);
+  width: 100vw;
 }
 /*# sourceMappingURL=style.css.map */
