@@ -1,0 +1,207 @@
+body{
+
+    background-image: url(../../img/background2.jpeg);
+}
+
+.team-wrapper{
+text-align: center;
+margin-top: 50px;
+}
+
+.team-container{
+display: flex;
+justify-content: space-between;
+margin-top: -100px;
+}
+
+.score{
+    opacity: 0;
+    margin-top: 20rem;
+    font-size: 100px;
+    text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
+	-webkit-background-clip: text;
+    border: solid gold 2px;
+    border-image: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+    border-image-slice: 1;
+    
+}
+
+.score-container{
+
+    background: black;
+}
+
+
+
+
+
+.trans-score1{
+    animation: trans-score1 1s linear both;
+}
+
+ 
+    @keyframes trans-score1 {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        50%{
+            opacity: 1;
+            transform: scale(3);
+            
+
+
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+    }
+  
+
+      .trans-score2{
+        animation: trans-score2 1s linear both;
+        animation-delay: 2s;
+    }
+        @keyframes trans-score2 {
+            0% {
+            transform: scale(0.8);
+            opacity: 0;
+            }
+            50%{
+                opacity: 1;
+                transform: scale(3);
+            }
+            100% {
+            opacity: 1;
+            transform: scale(1);
+            }
+        }
+.trans-score3{
+        animation: trans-score3 1s linear both;
+        animation-delay: 4s;
+    }
+        @keyframes trans-score3 {
+            0% {
+            transform: scale(0.8);
+            opacity: 0;
+            }
+            50%{
+                opacity: 1;
+                transform: scale(3);
+            }
+            100% {
+            opacity: 1;
+            transform: scale(1);
+            }
+        }
+.trans-score4{
+        animation: trans-score4 1s linear both;
+        animation-delay: 6s;
+    }
+        @keyframes trans-score4 {
+            0% {
+            transform: scale(0.8);
+            opacity: 0;
+            }
+            50%{
+                opacity: 1;
+                transform: scale(3);
+            }
+            100% {
+            opacity: 1;
+            transform: scale(1);
+            }
+        }
+.trans-score5{
+        animation: trans-score5 1s linear both;
+        animation-delay: 8s;
+       
+    }
+        @keyframes trans-score5 {
+            0% {
+            transform: scale(0.8);
+            opacity: 0;
+            }
+            50%{
+                opacity: 1;
+                transform: scale(3);
+            }
+            100% {
+            opacity: 1;
+            transform: scale(1);
+            }
+        }
+
+
+.total{
+opacity: 0;
+margin-top: 5rem;
+text-align:center;
+font-size: 200px;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
+	-webkit-background-clip: text;
+
+
+}        
+
+.trans-total-score { animation: trans-total-score 1s linear both;
+    animation-delay: 10s;
+
+}
+@keyframes trans-total-score {
+    
+        0% {
+       
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        50%{
+            transform: scale(3);
+            opacity: 1;
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+.check-button{
+
+margin-top: 100px;
+margin-left: 50%;
+transform: translate(-50%,-50%);
+    background-color: black;
+    height: 56px;
+    width: 200px;
+   
+    padding-top: 20px;
+    border-top :solid gold 3px;
+    border-bottom: solid gold 3px;
+    border-image: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+    border-image-slice: 1;
+ 
+
+
+p{
+    text-align:center;
+	line-height:0.95em;
+    
+
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
+	-webkit-background-clip: text;
+   
+
+
+    
+}
+}

@@ -1,0 +1,56 @@
+
+.team-list-container{
+position: absolute;
+    display: flex;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  
+}
+
+.left{
+.item{
+    background-color: black;
+    margin-top: 20px;
+    font-size: 30px;
+    height: fit-content;
+    width:fit-content;
+
+
+}
+
+}
+
+.right{
+.item{
+background-color: black;
+margin-top: 8px;
+
+}
+
+}
+
+.item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+    
+   
+  
+  
+  .list-item{
+    color: #DA8E00;
+    background: -webkit-linear-gradient(-45deg, red, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+    
+
+
+
+
