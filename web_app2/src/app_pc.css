@@ -48,6 +48,20 @@ body{
    cursor: pointer;
    
 }
+.modal_button{
+    display: none;
+ position: absolute;
+ text-align: center;
+ color: white;
+   height: 30px;
+   width:180px ;
+   transform: translateY(50%);
+  border-radius: 30px;
+   background: linear-gradient(to right,#0f71bc,#3ccfff);
+   right: 50%;
+   cursor: pointer;
+   
+}
 /* body */
 .container{
     display: flex;

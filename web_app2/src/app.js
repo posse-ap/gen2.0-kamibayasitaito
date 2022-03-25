@@ -1,6 +1,7 @@
 // モーダル
 const mordal=document.getElementById('mordal');
 const mordalbutton= document.getElementById('headerButton');
+const modalButton= document.getElementById('modalButton');
 const mainpage=document.getElementById('mainPage');
 // モーダルの可視性を定義
 const visibilityOriginal = mordal.style.visibility;
@@ -10,13 +11,9 @@ const mordalchange= e=>{
 mordal.style.visibility = visibilityOriginal;
 mainpage.classList.add('main_page');
 
-
-
 };
-
-
-
 mordalbutton.addEventListener('click',mordalchange);
+modalButton.addEventListener('click',mordalchange);
 
 
 const backbutton =document.getElementById('backButton');
@@ -54,22 +51,6 @@ choices.forEach(choice=> {
 
 // 記録・投稿ボタン処理
 const submit =document.getElementById('submitButton');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // twitterのチェックマーク
 const checkTwitter=document.getElementById('checkTwitter');
