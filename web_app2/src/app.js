@@ -1,25 +1,25 @@
 // モーダル
-const mordal=document.getElementById('mordal');
-const mordalbutton= document.getElementById('headerButton');
-const modalButton= document.getElementById('modalButton');
-const mainpage=document.getElementById('mainPage');
+const mordal = document.getElementById('mordal');
+const mordalbutton = document.getElementById('headerButton');
+const modalButton = document.getElementById('modalButton');
+const mainpage = document.getElementById('mainPage');
 // モーダルの可視性を定義
 const visibilityOriginal = mordal.style.visibility;
 mordal.style.visibility = 'hidden'
 
-const mordalchange= e=>{
-mordal.style.visibility = visibilityOriginal;
-mainpage.classList.add('main_page');
+const mordalchange = e => {
+  mordal.style.visibility = visibilityOriginal;
+  mainpage.classList.add('main_page');
 
 };
-mordalbutton.addEventListener('click',mordalchange);
-modalButton.addEventListener('click',mordalchange);
+mordalbutton.addEventListener('click', mordalchange);
+modalButton.addEventListener('click', mordalchange);
 
 
-const backbutton =document.getElementById('backButton');
-const mordalback=e=>{
-    mordal.style.visibility = 'hidden'
-   mainpage.classList.remove('main_page');
+const backbutton = document.getElementById('backButton');
+const mordalback = e => {
+  mordal.style.visibility = 'hidden'
+  mainpage.classList.remove('main_page');
 
 
 }
@@ -27,36 +27,36 @@ backbutton.addEventListener('click', mordalback);
 // モーダル表示ここまで
 
 // 選択欄の色変え
-const choices=document.querySelectorAll('[role="checkbox"]');
+const choices = document.querySelectorAll('[role="checkbox"]');
 
 
-const changeChoices=e =>{
- const target =e.target
- target.classList.toggle('choices_after_click');
- target.classList.toggle('choices');
- target.classList.toggle('check_box');
- target.classList.toggle('check_box_after_click');
- 
+const changeChoices = e => {
+  const target = e.target
+  target.classList.toggle('choices_after_click');
+  target.classList.toggle('choices');
+  target.classList.toggle('check_box');
+  target.classList.toggle('check_box_after_click');
+
 
 
 
 }
 
-choices.forEach(choice=> {
-  choice.addEventListener('click',changeChoices);
+choices.forEach(choice => {
+  choice.addEventListener('click', changeChoices);
 
 
 });
 
 
 // 記録・投稿ボタン処理
-const submit =document.getElementById('submitButton');
+const submit = document.getElementById('submitButton');
 
 // twitterのチェックマーク
-const checkTwitter=document.getElementById('checkTwitter');
+const checkTwitter = document.getElementById('checkTwitter');
 
-const changeCheck=t =>{
-  const target =t.target
+const changeCheck = t => {
+  const target = t.target
   target.classList.toggle('share_twitter_button');
   target.classList.toggle('share_twitter_button_after_click');
 
@@ -64,36 +64,36 @@ const changeCheck=t =>{
 
 
 };
-checkTwitter.addEventListener('click',changeCheck);
+checkTwitter.addEventListener('click', changeCheck);
 // twitterボタンの処理
 
 
-	
 
-function submit_click(){
+
+function submit_click() {
   var s, url;
-    var twitterText=document.getElementById('twitterText')
-    s =twitterText.value ;
-    url = document.location.href;
+  var twitterText = document.getElementById('twitterText')
+  s = twitterText.value;
+  url = document.location.href;
 
-  if (checkTwitter.className===("share_twitter_button_after_click")){
-    
-    
-   
-      if (s.length > 140) {
-        //文字数制限
-        alert("テキストが140字を超えています");
-      } else {
-        //投稿画面を開く
-        url = "http://twitter.com/share?"  + "&text=" + s;
-        window.open(url,"_blank","width=600,height=300");
-      }
-    
+  if (checkTwitter.className === ("share_twitter_button_after_click")) {
+
+
+
+    if (s.length > 140) {
+      //文字数制限
+      alert("テキストが140字を超えています");
+    } else {
+      //投稿画面を開く
+      url = "http://twitter.com/share?" + "&text=" + s;
+      window.open(url, "_blank", "width=600,height=300");
+    }
+
 
   }
-  else{
+  else {
 
-    
+
   }
 
 };
@@ -104,23 +104,23 @@ function submit_click(){
 
 
 // ロード画面処理
-const loadMordal =document.getElementById('loadMordal')
-loadMordal.style.visibility='hidden'
-const loadChange=e =>{
- loadMordal.style.visibility='visible'
- mordal.style.visibility = 'hidden'
- setTimeout(awesomeChange,3000)
+const loadMordal = document.getElementById('loadMordal')
+loadMordal.style.visibility = 'hidden'
+const loadChange = e => {
+  loadMordal.style.visibility = 'visible'
+  mordal.style.visibility = 'hidden'
+  setTimeout(awesomeChange, 3000)
 };
 
 
 submit.addEventListener('click', loadChange);
 
 // 完了画面
-const awesome =document.getElementById('awesomePage');
-awesome.style.visibility='hidden'
-const awesomeChange=e=>{
+const awesome = document.getElementById('awesomePage');
+awesome.style.visibility = 'hidden'
+const awesomeChange = e => {
 
-awesome.style.visibility='visible'
+  awesome.style.visibility = 'visible'
 
 
 }
@@ -128,11 +128,11 @@ awesome.style.visibility='visible'
 
 
 // 完了画面バックボタン
-const mainBackbutton =document.getElementById('mainBackButton');
-const mainback=e=>{
-    awesome.style.visibility = 'hidden'
-    loadMordal.style.visibility = 'hidden'
-   mainpage.classList.remove('main_page');
+const mainBackbutton = document.getElementById('mainBackButton');
+const mainback = e => {
+  awesome.style.visibility = 'hidden'
+  loadMordal.style.visibility = 'hidden'
+  mainpage.classList.remove('main_page');
 
 
 }
@@ -143,163 +143,178 @@ mainBackbutton.addEventListener('click', mainback);
 
 
 
-// // 棒グラフ
-// let studyData =JSON.parse('<?php echo json_encode($hour["study_time"];)?>')
-// console.log('studyData')
+// 棒グラフ
+var ctx = document.getElementById("myBarChart").getContext("2d");;
+var gradientStroke = ctx.createLinearGradient(0, 100, 0, 500);
+gradientStroke.addColorStop(0, "#0f71bc");
+gradientStroke.addColorStop(1, "#3ccfff");
+var myBarChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
 
-// var ctx = document.getElementById("myBarChart").getContext("2d");;
-// var gradientStroke = ctx.createLinearGradient(0, 100, 0, 500);
-// gradientStroke.addColorStop(0, "#0f71bc");
-// gradientStroke.addColorStop(1, "#3ccfff");
-//   var myBarChart = new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-     
-//       labels: ['', '2', '','4','', '6','', '8','', '10','', '12','', '14','', '16','', '18','', '20','', '22','', '24','','26','', '28','', '30', ''],
-//       datasets: [
-//         {
-//           label: '勉強時間',
-//           data: [studyData],
-//           backgroundColor: gradientStroke
-          
-//         }
-          
-        
-//       ]
-//     },
-//     options: {
-//       title: {
-//         display: true,
-        
-//       },
-//       legend: {
-//         display: false
-//      },
-//      responsive: true,
-//         maintainAspectRatio: false,
- 
+    labels: ['', '2', '', '4', '', '6', '', '8', '', '10', '', '12', '', '14', '', '16', '', '18', '', '20', '', '22', '', '24', '', '26', '', '28', '', '30', ''],
+    datasets: [{
+      label: '勉強時間',
+      data: [<? php foreach($sum_date as $hour) {
+        echo $hour . ",";
+      } ?>],
+      backgroundColor: gradientStroke
 
-//       scales: {
-//         xAxes: [{
-//             display: true,
-//             stacked: false,
-//             gridLines: {
-//               display: false,
-//               drawBorder: false
-//             }
-//           }],
-//         yAxes: [{
-//             gridLines: {
-//                 display: false,
-//                 drawBorder: false
-//               },
-//           ticks: {
-            
-//             suggestedMax: 8,
-//             suggestedMin: 0,
-//             stepSize: 2,
-//             callback: function(value, index, values){
-//               return  value +  'h'
-//             }
-//           }
-//         }]
-//       },
-//     }
-//   });
+    }
 
 
-// // 棒グラフのサイズ変更jquery
-// if (matchMedia('only screen and (min-width: 767px)').matches) {
-  
-//   $(function () {
-//     var container = $('.study_chart');
-//     var ctx= $('#chart');
-//     ctx.attr('width', container.width());
-//     ctx.attr('height', 400);
-// });
-//   //スマホ・タブレットの時の処理
-  
-//   }else{
-  
-//   $(function () {
-//     var container = $('.study_chart');
-//     var ctx= $('#chart');
-//     ctx.attr('width', container.width());
-//     ctx.attr('height', 900);
-// });
-//   PCの時の処理
-  
-//   }
-  
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+
+    },
+    legend: {
+      display: false
+    },
+    responsive: true,
+    maintainAspectRatio: false,
 
 
- 
-// // //学習言語 円グラフ
+    scales: {
+      xAxes: [{
+        display: true,
+        stacked: false,
+        gridLines: {
+          display: false,
+          drawBorder: false
+        }
+      }],
+      yAxes: [{
+        gridLines: {
+          display: false,
+          drawBorder: false
+        },
+        ticks: {
+
+          suggestedMax: 8,
+          suggestedMin: 0,
+          stepSize: 2,
+          callback: function (value, index, values) {
+            return value + 'h'
+          }
+        }
+      }]
+    },
+  }
+});
+// //学習言語 円グラフ
 
 
-//   var ctx = document.getElementById("studyLanguageChart");
-//   var myPieChart = new Chart(ctx, {
-//     type: 'doughnut',
-//     data: {
-//       labels: ["JavaScript", "CSS", "PHP", "HTML","Laravel","SQL","SHELL","情報システム情報システム基礎知識（その他）"],
-//       datasets: [{
-//           backgroundColor: [
-//             "#0345EC",
-//             "#0F71BD",
-//             "#20BDDE",
-//             "#3CCEFE",
-//             "#B29EF3",
-//             "#6D46EC",
-//             "#4A17EF",
-//             "#3105C0",
-//           ],
-//           data: [42, 18, 10,10, 8,6,4,2]
-          
-//       }]
-//     },
-//     options: {
-//       title: {
-//         display: true,
-        
-//       },
-//       legend: {
-//         display: false
-//      },
-//      responsive: true,
-//         maintainAspectRatio: false,
-//     }
-//   });
 
 
- 
-// // 円グラフ
 
-//   var ctx = document.getElementById("studyContentsChart");
-// var myPieChart = new Chart(ctx, {
-//   type: 'doughnut',
-//   data: {
-//     labels: ["ドットインストール", "N予備校", "POSSE課題", ],
-//     datasets: [{
-//         backgroundColor: [
-//             "#0445EC",
-//             "#0F70BC",
-//             "#20BDDE",
-            
-//         ],
-//         data: [42, 33, 25]
-//     }]
-//   },
-//   options: {
-//     title: {
-//       display: true,
-  
-//     },
-//     legend: {
-//         display: false
-//      },
-//      responsive: true,
-//         maintainAspectRatio: false,
-//   }
-// });
+var ctx = document.getElementById("studyLanguageChart");
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["JavaScript", "CSS", "PHP", "HTML", "Laravel", "SQL", "SHELL", "情報システム情報システム基礎知識（その他）"],
+    datasets: [{
+      backgroundColor: [
+        "#0345EC",
+        "#0F71BD",
+        "#20BDDE",
+        "#3CCEFE",
+        "#B29EF3",
+        "#6D46EC",
+        "#4A17EF",
+        "#3105C0",
+      ],
+      data: [<?= $language_string ?>]
 
-  
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+
+    },
+    legend: {
+      display: false
+    },
+    responsive: true,
+    maintainAspectRatio: false,
+  }
+});
+
+
+
+
+            <? php
+
+
+
+
+            // 円グラフコンテンツ
+
+            $stmt = $db -> prepare('SELECT *
+    FROM studyPost  WHERE contents_id = 1');
+            $stmt -> execute();
+$study_contents_hours1 = $stmt -> fetchAll();
+$N_total = 0;
+
+
+foreach($study_contents_hours1 as $hours1) {
+  $N_total += $hours1['study_time'];
+}
+$stmt = $db -> prepare('SELECT *
+    FROM studyPost  WHERE contents_id = 2');
+            $stmt -> execute();
+$study_contents_hours2 = $stmt -> fetchAll();
+$dot_total = 0;
+
+
+foreach($study_contents_hours2 as $hours2) {
+  $dot_total += $hours2['study_time'];
+}
+$stmt = $db -> prepare('SELECT *
+    FROM studyPost  WHERE contents_id = 3');
+            $stmt -> execute();
+$study_contents_hours3 = $stmt -> fetchAll();
+$posse_total = 0;
+
+
+foreach($study_contents_hours3 as $hours3) {
+  $posse_total += $hours3['study_time'];
+}
+
+
+
+
+            ?>
+
+
+
+            var ctx = document.getElementById("studyContentsChart");
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["ドットインストール", "N予備校", "POSSE課題",],
+    datasets: [{
+      backgroundColor: [
+        "#0445EC",
+        "#0F70BC",
+        "#20BDDE",
+
+      ],
+      data: [<? php echo $N_total ?>, <? php echo $dot_total ?>, <? php echo $posse_total ?>]
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+
+    },
+    legend: {
+      display: false
+    },
+    responsive: true,
+    maintainAspectRatio: false,
+  }
+});
